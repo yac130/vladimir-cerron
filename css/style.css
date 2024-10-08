@@ -830,10 +830,11 @@ html {
             padding: 20px;
         }
     .bg-mapa{
-        max-width: 250px;
+        max-width: 200px;
+        position: relative;
     }
     .box-info-mapa{
-        bottom: -65%;
+        bottom: -100%;
         max-width: 100%;
         right: inherit;        
         top: inherit;
