@@ -650,7 +650,12 @@ html {
 .box-flourish{
     margin: 40px auto;
     max-width: 700px;
-}           
+}   
+.box-iframe-google{
+    margin: 0 auto;
+    max-width: 650px;
+    position: relative;
+}        
 
 @media (max-width: 640px) {
 
