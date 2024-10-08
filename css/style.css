@@ -463,6 +463,10 @@ html {
                         display: block;
                         font-family: 'founders_groteskregular';
                     }
+                    span.fecha-cita{
+                        font-size: 15px;
+                        max-width: 270px;
+                    }
 .box-main-twitter{
     background-color: #fff;
     padding: 100px 0 50px;
