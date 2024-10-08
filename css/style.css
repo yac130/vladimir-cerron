@@ -689,7 +689,7 @@ html {
         margin: 0 auto 20px;
     }
     .box-main-mapa{
-        background-size: cover;
+        /*background-size: cover;*/
     }
     p.bajada-main-mapa{
         font-size: 19px;
