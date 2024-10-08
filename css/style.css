@@ -263,6 +263,7 @@ html {
                 
 .box-main-mapa{
     background: url('../img/bg-papel.jpg') repeat center top;
+    background-attachment: fixed;
     background-size: 100%;
     padding: 80px 0;
 }
@@ -658,6 +659,38 @@ html {
 }        
 
 @media (max-width: 640px) {
+
+    .main-portada{
+        background-size: cover;
+    }
+    .box-titular-portada{
+        margin-top: 70px;
+        max-width: 100%;
+    }
+        .box-titular-portada h1{
+            font-size: 3.5rem;
+        }
+        p.bajada{
+            font-size: 19px;
+            padding: 60px 20px 80px;
+        }
+    p.bajada-dias{
+        padding: 0 20px;
+    }
+    .box-calendarios h4{
+        max-width: 235px;
+    }
+    .box-mes {
+        display: block;
+        margin: 0 auto 20px;
+    }
+    p.bajada-main-mapa{
+        font-size: 19px;
+        padding: 0 20px;
+    }
+    p.aviso-mapa{
+        margin: 40px 20px;
+    }
 
 }
 
