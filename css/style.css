@@ -1,0 +1,684 @@
+body, 
+html {	    
+    box-sizing: border-box;    
+    font-style: normal;
+    font-weight: normal;
+    /*height: 100%;*/
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+    font-family: 'founders_groteskregular';
+    src: url('../fonts/foundersgrotesk-regular-webfont.woff2') format('woff2'),
+         url('../fonts/foundersgrotesk-regular-webfont.woff') format('woff');
+}
+@font-face {
+    font-family: 'founders_groteskbold';
+    src: url('../fonts/foundersgrotesk-bold-webfont.woff2') format('woff2'),
+         url('foundersgrotesk-bold-webfont.woff') format('woff');
+}
+@font-face {
+    font-family: 'chronicle_displaySBdIt';
+    src: url('../fonts/chronicledisp-semiboldital-webfont.woff2') format('woff2'),
+         url('../fonts/chronicledisp-semiboldital-webfont.woff') format('woff');
+}
+.clear{
+    clear: both;
+}
+
+.box-contador{
+    background-color: #000;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 30;
+}
+    .box-ctn-contador{
+        text-align: center;
+    }
+        .box-ctn-contador img{
+            display: inline-block;
+            max-width: 15px;
+            vertical-align: middle;
+
+            animation: pulse 1.5s infinite;
+        }
+            @keyframes pulse {
+                0% {
+                    opacity: 0;
+                }
+                50% {
+                    opacity: 1;
+                }
+                100%{
+                    opacity: 0;
+                }
+            }
+        .box-ctn-contador p{
+            color: #D91414;
+            display: inline-block;
+            font: 18px/1.2 'founders_groteskbold';
+            margin: 0 auto;
+            text-transform: uppercase;
+            vertical-align: top;
+        }
+            .box-ctn-contador p span{
+                color: #fff;
+            }
+.main-portada{
+    background: url('../img/bg-papel.jpg') no-repeat center top;
+    background-size: 100%;
+    text-align: center;
+}
+    .box-ctn-portada{
+        margin: 0 auto;
+        max-width: 900px;
+        text-align: left;
+    }
+        .box-titular-portada{
+            margin-top: 150px;
+            max-width: 355px;
+            display: inline-block;
+            vertical-align: top;
+        }
+            .box-titular-portada img{
+                display: block;
+                margin: 0 auto;
+                max-width: 260px;
+            }
+            .box-titular-portada h1{
+                color: #fff;
+                font: 62px/0.9'founders_groteskbold';
+                margin: 0 auto;
+                text-align: center;
+                text-transform: uppercase;
+            }
+    img.bg-cerron-portada{
+        display: inline-block;
+        margin-top: -75px;
+        max-width: 540px;
+        vertical-align: top;
+        mix-blend-mode: lighten;
+    }
+    p.bajada{
+        color: #fff;
+        font: 17px/1.4 'founders_groteskregular';
+        margin: 0 auto;
+        max-width: 380px;
+        padding: 60px 0 80px;
+        text-align: center;
+    }
+        p.bajada span,
+        p.bajada-dias span{
+            color: #D91414;
+            font-family: 'founders_groteskbold';
+        }
+.box-main-dias{
+    background-color: #fff;
+    padding: 40px 0;
+}
+    .box-main-dias h3,
+    .box-main-twitter h3{
+        color: #000;
+        font: 36px/1.3 "Noto Serif KR", serif;
+        margin: 0 auto;
+        text-align: center;
+    }
+        p.bajada-dias{
+            font: 17px/1.4 'founders_groteskregular';
+            margin: 20px auto;
+            max-width: 450px;
+            text-align: left;
+        }
+    .main-calendario-dias{
+        margin: 60px auto;
+        text-align: left;
+    }
+        .main-calendario-dias span{
+            background-color: #D91414;
+            color: #fff;
+            display: block;
+            font: 20px/1.3 "Noto Serif KR", serif;
+            font-weight: 600;
+            margin: 0 auto 30px;
+            max-width: 200px;
+            padding: 5px 10px;
+            text-align: center;
+        }
+        .box-leyenda-calendario{
+            text-align: center;
+        }
+            .leyenda{
+                display: inline-block;
+                margin: 0 14px;
+                max-width: 100px;
+                vertical-align: top;
+            }
+                .bg-leyenda-roja{
+                    background: rgb(217,20,20);
+                    background: linear-gradient(133deg, rgba(217,20,20,1) 0%, rgba(255,255,255,1) 100%);
+                    height: 5px;
+                    margin: 0 auto;
+                    max-width: 60px;
+                }
+                .bg-leyenda-verde{
+                    background: #2ED920;
+                    height: 5px;
+                    margin: 0 auto;
+                    max-width: 60px;
+                }
+                .leyenda p{
+                    font: 15px/1.3 'founders_groteskregular';
+                    margin: 8px auto;
+                }
+        .box-calendarios{
+            margin: 30px auto;
+            max-width: 1115px;
+        }
+            .box-calendarios h4{
+                color: #909090;
+                font: 26px/1.3 "Noto Serif KR", serif;
+                font-weight: 700;
+                margin: 0 auto 20px;
+                padding: 0 20px;
+                text-align: left;
+            }
+            .box-mes{
+                box-sizing: border-box;
+                display: inline-block;
+                margin: 0 20px 20px;
+                max-width: 235px;
+                text-align: left;
+                vertical-align: top;
+            }
+                .box-mes h5{
+                    color: #D91414;
+                    font: 15px/1.3 "Noto Serif KR", serif;
+                    font-weight: 700;
+                    margin: 0 auto 10px;
+                    padding: 0 5px;
+                    text-align: left;
+                }
+                .dia{
+                    display: inline-block;
+                    height: 20px;
+                    margin: 0 5px 10px;
+                    vertical-align: top;
+                    width: 20px;
+                }
+                    .dia-inactivo{
+                        background: rgb(217,20,20);
+                        background: linear-gradient(180deg, rgba(217,20,20,1) 0%, rgba(255,255,255,1) 100%);
+                        opacity: .3;
+                    }
+                    .dia-activo{
+                        background: #2ED920;
+                        cursor: pointer;
+                        position: relative;
+                    }
+                    .dia-rojo{
+                        background: rgb(217,20,20);
+                        background: linear-gradient(180deg, rgba(217,20,20,1) 0%, rgba(255,255,255,1) 100%);
+                    }
+                    .dia-blanco{
+                        background-color: #fff;
+                    }
+                    .box-info-dia{
+                        background-color: #000;
+                        box-sizing: border-box;
+                        cursor: auto;
+                        display: none;
+                        left: -92px;
+                        padding: 20px;
+                        position: absolute;
+                        top: 32px;
+                        width: 200px;     
+                        z-index: 10;                   
+                    }
+                        .box-info-dia .arrow{
+                            border-color: transparent transparent #000 transparent;
+                            border-style: solid;
+                            border-width: 0 12px 12px 12px;                            
+                            height: 0px;
+                            left: 45%;
+                            position: absolute;           
+                            transform: rotate(0deg);
+                            top: -12px;
+                            width: 0px;  
+                        }
+                        .box-info-dia h6{
+                            color: #fff;
+                            font: 15px/1.4 "Noto Serif KR", serif;
+                            font-weight: 700;
+                            margin: 0 auto;
+                        }
+                        .box-info-dia p{
+                            color: #fff;
+                            font: 15px/1.4 'founders_groteskregular';
+                            margin: 10px auto 0;
+                        }
+                
+.box-main-mapa{
+    background: url('../img/bg-papel.jpg') repeat center top;
+    background-size: 100%;
+    padding: 80px 0;
+}
+    .box-main-mapa h3{
+        color: #fff;
+        font: 32px/1.3 "Noto Serif KR", serif;
+        font-weight: 500;
+    }
+    p.bajada-main-mapa{
+        color: #fff;
+        font: 17px/1.4 'founders_groteskregular';
+        margin: 20px auto;
+        max-width: 440px;
+    }
+    p.aviso-mapa{
+        border: 1px solid #D91414;
+        box-sizing: border-box;
+        color: #fff;
+        font: 17px/1.4 'founders_groteskregular';
+        margin: 40px auto;
+        max-width: 370px;
+        padding: 20px;
+    }
+        p.aviso-mapa span{
+            color: #D91414;
+            font-family: 'founders_groteskbold';
+        }
+    .box-bg-mapa{
+        margin: 80px auto;        
+        position: relative;
+        text-align: center;
+        width: 100%;
+    }
+        .ctn-bg-mapa{
+            margin: 0 auto;
+            max-width: 500px;
+            position: relative;
+        }
+            .bg-mapa{
+                display: block;    
+                margin: 85px auto 0;
+                max-width: 450px;
+            }
+            .icon-cerron{
+                cursor: pointer;
+                max-width: 50px;
+                opacity: 0;
+                position: absolute;            
+            }
+                #icon-cerron-1{
+                    bottom: 220px;
+                    left: 150px;
+                }
+                #icon-cerron-2{
+                    bottom: 240px;
+                    left: 260px;
+                }
+                #icon-cerron-3{
+                    bottom: 240px;
+                    left: 230px;
+                }
+                #icon-cerron-4{
+                    bottom: 250px;
+                    left: 140px;
+                }
+                #icon-cerron-5{
+                    bottom: 180px;
+                    left: 170px;
+                }
+                #icon-cerron-6{
+                    bottom: 240px;
+                    left: 230px;
+                }
+        .box-info-mapa{
+            background-color: #000;
+            box-sizing: border-box;
+            max-width: 280px;  
+            padding: 10px 20px;      
+            position: absolute;
+            right: -50%;
+            text-align: left;
+            top: 25%; 
+        }
+            .box-info-mapa h5{
+                color: #fff;
+                font: 14px/1.2 'founders_groteskbold';
+                margin: 10px auto;
+            }
+                .box-info-mapa h5 span{
+                    color: #D91414;
+                    display: block;
+                }
+            .box-info-mapa p{
+                color: #fff;
+                font: 17px/1.4 'founders_groteskregular';
+            }
+    .box-ctn-frases{
+        margin: 0 auto;
+        max-width: 900px;
+    }
+        .box-ctn-frases .box-frase:nth-child(2){
+            float: right;
+        }
+        .box-frase{
+            max-width: 520px;
+        }
+            .box-frase p{
+                color: #fff;
+                font:  17px/1.7 'chronicle_displaySBdIt';
+                margin: 0 auto;
+            }
+            .box-autor{
+                margin: 25px 0;
+            }
+                .box-autor img{
+                    display: inline-block;
+                    max-width: 80px;
+                    vertical-align: top;
+                }
+                .info-box-autor{
+                    color: #fff;
+                    display: inline-block;
+                    font: 17px/1.2 'founders_groteskbold';
+                    padding: 20px 10px;
+                    vertical-align: top;
+                }
+                    .info-box-autor span{
+                        display: block;
+                        font-family: 'founders_groteskregular';
+                    }
+.box-main-twitter{
+    background-color: #fff;
+    padding: 100px 0 50px;
+}
+    .box-main-twitter h3{
+        max-width: 400px;
+    }
+        .box-main-twitter h3.ancho{
+            max-width: 100%;
+        }
+        .box-main-twitter h3.medio{
+            max-width: 480px;
+        }
+    .box-main-twitter h4{
+        font: 24px / 1.3 "Noto Serif KR", serif;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .box-main-twitter p{
+        font: 17px/1.5 'founders_groteskregular';
+        margin: 20px auto;
+        max-width: 500px;
+    }
+        .box-main-twitter p span{
+            font-family: 'founders_groteskbold';
+        }
+        .box-main-twitter p a{
+            color: #000;
+            font-family: 'founders_groteskbold';
+        }
+    p.aviso-analisis{
+        color: #818181;
+        font-size: 14px;
+        margin: 35px auto;
+        max-width: 400px;
+    }
+    .box-main-tuits{
+        margin: 0 auto 40px;
+        max-width: 1000px;        
+        text-align: center;
+    }
+        #box-main-tuits-1 img:nth-child(1){
+            float: left;
+            max-width: 650px;
+        }
+        #box-main-tuits-1 img:nth-child(2){
+            float: right;
+            margin-top: -150px;
+            max-width: 500px;            
+        }
+        #box-main-tuits-1 img:nth-child(3){
+            float: left;
+            margin-left: 50px;
+            max-width: 450px;
+        }
+        #box-main-tuits-2 img:nth-child(1){
+            float: right;
+            max-width: 480px;
+        }
+        #box-main-tuits-2 img:nth-child(2){
+            float: left;
+            margin-left: 20px;
+            margin-top: -150px;
+            max-width: 550px;
+        }
+        #box-main-tuits-2 img:nth-child(3){
+            float: right;
+            margin-top: -170px;
+            max-width: 450px;
+        }
+        #box-main-tuits-3 img:nth-child(1){
+            float: left;
+            max-width: 550px;
+        }
+        #box-main-tuits-3 img:nth-child(2){
+            float: right;
+            margin-top: 60px;
+            max-width: 430px;
+        }
+        #box-main-tuits-3 img:nth-child(3){
+            float: left;
+            margin-left: 150px;
+            max-width: 500px;
+        }
+        #box-main-tuits-4 img:nth-child(1){
+            float: left;
+            max-width: 550px;
+        }
+        #box-main-tuits-4 img:nth-child(2){
+            float: right;
+            margin-top: 60px;
+            max-width: 430px;
+        }
+        #box-main-tuits-4 img:nth-child(3){
+            float: left;
+            margin-left: 150px;
+            max-width: 500px;
+        }
+    .box-slider{
+        margin: 0 auto;
+        max-width: 900px;
+        padding: 100px 0;
+    }
+        .box-slider .bx-wrapper{
+            background: transparent;
+            box-shadow: none;
+        }
+            .box-slider .bx-wrapper .bx-controls-direction a{
+                top: 10%;
+            }
+            .box-slider .bx-wrapper .bx-prev{
+                background: url('../img/flecha-izquierda-slider.png') no-repeat center center;
+                background-size: 40%;
+                height: 40px;
+                width: 40px;
+                z-index: 20;
+            }
+                .box-slider .bx-wrapper .bx-prev:hover{
+                    background: url('../img/flecha-izquierda-slider.png') no-repeat center center;
+                    background-size: 40%;
+                }
+            .box-slider .bx-wrapper .bx-next{
+                background: url('../img/flecha-derecha-slider.png') no-repeat center center;
+                background-size: 40%;
+                height: 40px;
+                width: 40px;
+                z-index: 20;
+            }
+                .box-slider .bx-wrapper .bx-next:hover{
+                    background: url('../img/flecha-derecha-slider.png') no-repeat center center;
+                    background-size: 40%;
+                }
+        .box-info-slide{
+            box-sizing: border-box;
+            margin: 0 auto 40px;
+            max-width: 300px;            
+        }            
+            .box-info-slide p{
+                border: 1px solid #D91414;
+                font:  24px/1.3 'chronicle_displaySBdIt';
+                margin: 0 auto 20px;
+                padding: 20px;
+                position: relative;
+            }
+            h6.nombre{
+                font: 16px/1.2 'founders_groteskregular';
+                margin: 10px auto;
+            }
+                h6.nombre span{
+                    display: block;
+                    font-family: 'founders_groteskbold';
+                }
+.box-main-captura{
+    background: url(../img/bg-papel.jpg) repeat center top;
+    background-size: 100%;
+    padding: 80px 0;
+}
+    .box-main-captura h3{
+        color: #fff;
+        font: 36px / 1.3 "Noto Serif KR", serif;
+        margin: 0 auto;
+        max-width: 600px;
+        text-align: center;
+    }
+    p.bajada-captura{
+        color: #fff;
+        font: 16px/1.5 'founders_groteskregular';
+        margin: 30px auto;
+        max-width: 420px;
+    }
+        p.bajada-captura span{
+            font-family: 'founders_groteskbold';
+        }
+    .bg-captura{
+        display: block;
+        filter: drop-shadow(2px 8px 12px black);
+        margin: 40px auto 80px;
+        max-width: 600px;
+    }
+    .box-cronologia{
+        margin: 0 auto;
+        max-width: 430px;
+    }
+        .box-cronologia h6{
+            color: #fff;
+            font: 20px/1.2 'founders_groteskbold';
+            margin: 0 auto;
+        }
+            .box-cronologia h6 span{
+                color: #D91414;
+                display: block;
+                font-size: 18px;
+            }
+        .box-cronologia p{
+            color: #fff;
+            font: 16px/1.5 'founders_groteskregular';
+            margin: 8px auto 30px;
+        }
+.box-main-junin{
+    background-color: #fff;
+    padding: 60px 0;
+}
+    .box-main-junin h3{
+        color: #000;
+        font: 36px / 1.3 "Noto Serif KR", serif;
+        margin: 0 auto;
+        max-width: 800px;
+        text-align: center;
+    }
+    p.bajada-junin{
+        font: 16px/1.5 'founders_groteskregular';
+        margin: 40px auto;
+        max-width: 420px;
+    }
+        p.bajada-junin span{
+            font-family: 'founders_groteskbold';
+        }
+    .box-iframe-google{
+        margin: 60px auto;
+        max-width: 800px;
+    }
+    .box-metodologia{
+        margin: 40px auto;
+        max-width: 400px;
+    }
+        .box-metodologia h6{
+            color: #D91414;
+            font: 18px/1.3 'founders_groteskbold';
+            margin: 0 auto 20px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        .box-metodologia p{
+            color: #D91414;
+            font: 16px/1.5 'founders_groteskbold';
+            margin: 0 auto 20px;
+        }
+    .box-creditos{
+        margin: 100px auto 20px;
+    }
+        .box-creditos img{
+            display: block;
+            margin: 0 auto 40px;
+            max-width: 120px;
+        }
+        .box-creditos p{
+            font: 16px/1.3 'founders_groteskregular';
+            text-align: center;
+        }
+            .box-creditos p span{
+                display: block;
+                font-family: 'founders_groteskbold';
+            }
+
+@media (max-width: 640px) {
+
+}
+
+@media (max-height: 732px) {
+
+    .bg-mapa{
+        max-width: 350px;
+    }
+        .box-info-mapa{
+            max-width: 320px;
+            top: 20%;
+        }
+        #icon-cerron-1 {
+            bottom: 140px;
+            left: 175px;
+        }
+        #icon-cerron-2 {
+            bottom: 165px;
+            left: 215px;
+        }
+        #icon-cerron-3 {
+            bottom: 165px;
+            left: 230px;
+        }
+        #icon-cerron-4 {
+            bottom: 150px;
+            left: 175px;
+        }
+        #icon-cerron-5 {
+            bottom: 125px;
+            left: 185px;
+        }
+
+}
