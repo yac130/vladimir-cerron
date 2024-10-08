@@ -658,7 +658,7 @@ html {
     position: relative;
 }        
 
-@media (max-width: 375px){
+@media (max-width: 376px){
 
     .box-bg-mapa .box-info-mapa{
         max-width: 100%;
