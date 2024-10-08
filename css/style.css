@@ -750,6 +750,15 @@ html {
     .box-metodologia{
         padding: 0 20px;
     }
+    .box-slider{
+        padding: 100px 0 0;
+    }
+    .box-info-slide{
+        max-width: 65%;
+    }
+        .box-info-slide p{
+            padding: 20px;
+        }
 
 }
 

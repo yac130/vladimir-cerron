@@ -745,7 +745,7 @@
     <div class="box-main-twitter">
         <h3>El prófugo que no podía dejar de tuitear</h3>
         <p>
-            <span>Hasta el último 4 de octubre, Cerrón, desde la clandestinidad, ha tuiteado 1,771 veces.</span> Sus publicaciones con corte crítico, esencialmente, son para hacer mención del Gobierno y atacar el sistema de justicia.
+            <span>Hasta el último 4 de octubre, Cerrón, desde la clandestinidad, ha tuiteado 1,467 veces.</span> Sus publicaciones con corte crítico, esencialmente, son para hacer mención del Gobierno y atacar el sistema de justicia.
         </p>
         <p class="aviso-analisis">
             *En el análisis solo se han empleado los tuits originales del usuario @Vladimir_Cerrón. No se han contabilizado los retuits (publicaciones externas compartidas por la cuenta).
@@ -774,7 +774,7 @@
 
         <h4>Julio, su mes más tuitero</h4>
         <p>
-            En julio de 2024, Cerrón registró su mayor actividad en X con 240 publicaciones. Los lunes y viernes son los días en los que más tuitea. Entre enero y febrero últimos, tuvo un descenso en su presencia en redes. Coincide con la operación policial en el condominio Mikonoxs, en Asia, al sur de Lima.
+            En julio de 2024, Cerrón registró su mayor actividad con X con 240 publicaciones. Los lunes y viernes son los días en los que más tuitea. Entre enero y febrero últimos, tuvo un descenso en su presencia en redes. Coincide con la operación policial en el condominio Mikonos, en Asia, al sur de Lima.
         </p>  
 
         <div class="box-flourish">
@@ -1070,51 +1070,51 @@
     <!-- animación mapa -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-    const controller = new ScrollMagic.Controller();
+            const controller = new ScrollMagic.Controller();
 
-    // Mantener el box-bg-mapa fijo en la pantalla
-    new ScrollMagic.Scene({
-        triggerElement: ".box-bg-mapa", // Activa la escena cuando esta clase entra en el viewport
-        triggerHook: 0, // Empieza en la parte superior del viewport
-        duration: "600%" // Duración del scroll en la que el elemento estará fijo
-    })
-    .setPin(".box-bg-mapa")
-    .addTo(controller);
+            // Mantener el box-bg-mapa fijo en la pantalla
+            new ScrollMagic.Scene({
+                triggerElement: ".box-bg-mapa", // Activa la escena cuando esta clase entra en el viewport
+                triggerHook: 0, // Empieza en la parte superior del viewport
+                duration: "600%" // Duración del scroll en la que el elemento estará fijo
+            })
+            .setPin(".box-bg-mapa")
+            .addTo(controller);
 
-    // Array de IDs para iconos y textos
-    const elements = [
-        { icon: "#icon-cerron-1", info: "#info-mapa-cerron-1" },
-        { icon: "#icon-cerron-2", info: "#info-mapa-cerron-2" },
-        { icon: "#icon-cerron-3", info: "#info-mapa-cerron-3" },
-        { icon: "#icon-cerron-4", info: "#info-mapa-cerron-4" },
-        { icon: "#icon-cerron-5", info: "#info-mapa-cerron-5" },
-        { icon: "#icon-cerron-6", info: "#info-mapa-cerron-6" },
-    ];
+            // Array de IDs para iconos y textos
+            const elements = [
+                { icon: "#icon-cerron-1", info: "#info-mapa-cerron-1" },
+                { icon: "#icon-cerron-2", info: "#info-mapa-cerron-2" },
+                { icon: "#icon-cerron-3", info: "#info-mapa-cerron-3" },
+                { icon: "#icon-cerron-4", info: "#info-mapa-cerron-4" },
+                { icon: "#icon-cerron-5", info: "#info-mapa-cerron-5" },
+                { icon: "#icon-cerron-6", info: "#info-mapa-cerron-6" },
+            ];
 
-    elements.forEach((element, index) => {
-        // Escena para cada par icono - info
-        new ScrollMagic.Scene({
-            triggerElement: ".box-bg-mapa", 
-            offset: 900 * index, // Ajusta el offset según el scroll necesario
-            duration: 1000 // Duración de visibilidad
-        })
-        .on("enter", function() {
-            // Mostrar el icono e info correspondientes
-            gsap.to(element.icon, { opacity: 1, duration: 0.5 });
+            elements.forEach((element, index) => {
+                // Escena para cada par icono - info
+                new ScrollMagic.Scene({
+                    triggerElement: ".box-bg-mapa", 
+                    offset: 900 * index, // Ajusta el offset según el scroll necesario
+                    duration: 1000 // Duración de visibilidad
+                })
+                .on("enter", function() {
+                    // Mostrar el icono e info correspondientes
+                    gsap.to(element.icon, { opacity: 1, duration: 0.5 });
 
-            // Actualizar el contenido del info-mapa
-            elements.forEach((el) => {
-                gsap.to(el.info, { opacity: 0, duration: 0.5 }); // Ocultar otros info-mapa
+                    // Actualizar el contenido del info-mapa
+                    elements.forEach((el) => {
+                        gsap.to(el.info, { opacity: 0, duration: 0.5 }); // Ocultar otros info-mapa
+                    });
+                    gsap.to(element.info, { opacity: 1, duration: 0.5 }); // Mostrar el info-mapa correspondiente
+                })
+                .on("leave", function() {
+                    // No ocultar los iconos cuando salen del viewport
+                    // El icono ya permanece visible
+                })
+                .addTo(controller);
             });
-            gsap.to(element.info, { opacity: 1, duration: 0.5 }); // Mostrar el info-mapa correspondiente
-        })
-        .on("leave", function() {
-            // No ocultar los iconos cuando salen del viewport
-            // El icono ya permanece visible
-        })
-        .addTo(controller);
-    });
-});
+        });
 
 
     </script>  
