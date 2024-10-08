@@ -660,6 +660,10 @@ html {
 
 @media (max-width: 640px) {
 
+    .box-contador{
+        position: fixed;
+        width: 100%;
+    }
     .main-portada{
         background-size: cover;
     }
@@ -684,12 +688,67 @@ html {
         display: block;
         margin: 0 auto 20px;
     }
+    .box-main-mapa{
+        background-size: cover;
+    }
     p.bajada-main-mapa{
         font-size: 19px;
         padding: 0 20px;
     }
     p.aviso-mapa{
         margin: 40px 20px;
+    }
+    .box-info-dia p{
+        font-size: 17px;
+    }
+    .box-ctn-frases{
+        padding: 0 20px;
+    }
+        .box-frase{
+            margin-bottom: 80px;
+        }
+            .box-frase p{
+                font-size: 19px;
+            }
+    .box-main-twitter p{
+        font-size: 19px;
+        padding: 0 20px;
+    }
+    #box-main-tuits-1 img:nth-child(1),
+    #box-main-tuits-1 img:nth-child(2),
+    #box-main-tuits-1 img:nth-child(3),
+    #box-main-tuits-2 img:nth-child(1),
+    #box-main-tuits-2 img:nth-child(2),
+    #box-main-tuits-2 img:nth-child(3),
+    #box-main-tuits-3 img:nth-child(1),
+    #box-main-tuits-3 img:nth-child(2),
+    #box-main-tuits-3 img:nth-child(3),
+    #box-main-tuits-4 img:nth-child(1),
+    #box-main-tuits-4 img:nth-child(2),
+    #box-main-tuits-4 img:nth-child(3){
+        float: none;
+        margin: 0 auto 20px;
+    }
+    .box-main-twitter h4{
+        font-size: 27px;
+        padding: 0 20px;
+    }
+    p.bajada-captura,
+    p.bajada-junin{
+        font-size: 19px;
+        padding: 0 20px;  
+    }
+    .bg-captura{
+        max-width: 90%;
+    }
+    .box-cronologia{
+        padding: 0 20px;
+    }
+        .box-cronologia p{
+            font-size: 19px;
+        }
+    .box-metodologia{
+        padding: 0 20px;
     }
 
 }

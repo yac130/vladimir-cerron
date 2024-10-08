@@ -1070,47 +1070,52 @@
     <!-- animación mapa -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-        const controller = new ScrollMagic.Controller();
+    const controller = new ScrollMagic.Controller();
 
-        // Mantener el box-bg-mapa fijo en la pantalla
+    // Mantener el box-bg-mapa fijo en la pantalla
+    new ScrollMagic.Scene({
+        triggerElement: ".box-bg-mapa", // Activa la escena cuando esta clase entra en el viewport
+        triggerHook: 0, // Empieza en la parte superior del viewport
+        duration: "600%" // Duración del scroll en la que el elemento estará fijo
+    })
+    .setPin(".box-bg-mapa")
+    .addTo(controller);
+
+    // Array de IDs para iconos y textos
+    const elements = [
+        { icon: "#icon-cerron-1", info: "#info-mapa-cerron-1" },
+        { icon: "#icon-cerron-2", info: "#info-mapa-cerron-2" },
+        { icon: "#icon-cerron-3", info: "#info-mapa-cerron-3" },
+        { icon: "#icon-cerron-4", info: "#info-mapa-cerron-4" },
+        { icon: "#icon-cerron-5", info: "#info-mapa-cerron-5" },
+        { icon: "#icon-cerron-6", info: "#info-mapa-cerron-6" },
+    ];
+
+    elements.forEach((element, index) => {
+        // Escena para cada par icono - info
         new ScrollMagic.Scene({
-            triggerElement: ".box-bg-mapa", // Activa la escena cuando esta clase entra en el viewport
-            triggerHook: 0, // Empieza en la parte superior del viewport
-            duration: "600%" // Duración del scroll en la que el elemento estará fijo
+            triggerElement: ".box-bg-mapa", 
+            offset: 900 * index, // Ajusta el offset según el scroll necesario
+            duration: 1000 // Duración de visibilidad
         })
-        .setPin(".box-bg-mapa")
+        .on("enter", function() {
+            // Mostrar el icono e info correspondientes
+            gsap.to(element.icon, { opacity: 1, duration: 0.5 });
+
+            // Actualizar el contenido del info-mapa
+            elements.forEach((el) => {
+                gsap.to(el.info, { opacity: 0, duration: 0.5 }); // Ocultar otros info-mapa
+            });
+            gsap.to(element.info, { opacity: 1, duration: 0.5 }); // Mostrar el info-mapa correspondiente
+        })
+        .on("leave", function() {
+            // No ocultar los iconos cuando salen del viewport
+            // El icono ya permanece visible
+        })
         .addTo(controller);
-
-        // Array de IDs para iconos y textos
-        const elements = [
-            { icon: "#icon-cerron-1", info: "#info-mapa-cerron-1" },
-            { icon: "#icon-cerron-2", info: "#info-mapa-cerron-2" },
-            { icon: "#icon-cerron-3", info: "#info-mapa-cerron-3" },
-            { icon: "#icon-cerron-4", info: "#info-mapa-cerron-4" },
-            { icon: "#icon-cerron-5", info: "#info-mapa-cerron-5" },
-            { icon: "#icon-cerron-6", info: "#info-mapa-cerron-6" },
-        ];
-
-        elements.forEach((element, index) => {
-            // Escena para cada par icono - info
-            new ScrollMagic.Scene({
-                triggerElement: ".box-bg-mapa", 
-                offset: 900 * index, // Ajusta el offset según el scroll necesario
-                duration: 1000 // Duración de visibilidad
-            })
-            .on("enter", function() {
-                // Mostrar el icono e info correspondientes
-                gsap.to(element.icon, { opacity: 1, duration: 0.5 });
-                gsap.to(element.info, { opacity: 1, duration: 0.5 });
-            })
-            .on("leave", function() {
-                // Ocultar el icono e info cuando sale del viewport
-                gsap.to(element.icon, { opacity: 0, duration: 0.5 });
-                gsap.to(element.info, { opacity: 0, duration: 0.5 });
-            })
-            .addTo(controller);
-        });
     });
+});
+
 
     </script>  
     
