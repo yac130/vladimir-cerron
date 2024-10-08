@@ -658,6 +658,15 @@ html {
     position: relative;
 }        
 
+@media (max-width: 375px){
+
+    .box-bg-mapa .box-info-mapa{
+        max-width: 100%;
+        top: inherit;
+    }
+
+}
+
 @media (max-width: 640px) {
 
     .box-contador{
