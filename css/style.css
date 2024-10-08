@@ -661,6 +661,7 @@ html {
 @media (max-width: 376px){
 
     .box-bg-mapa .box-info-mapa{
+        bottom: 0;
         max-width: 100%;
         top: inherit;
     }
