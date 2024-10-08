@@ -702,6 +702,7 @@ html {
         font-size: 17px;
     }
     .box-ctn-frases{
+        margin-top: 180px;
         padding: 0 20px;
     }
         .box-frase{
@@ -759,6 +760,16 @@ html {
         .box-info-slide p{
             padding: 20px;
         }
+    .box-info-mapa{
+        bottom: -25%;
+        max-width: 100%;
+        right: inherit;        
+        top: inherit;
+        width: 100%;        
+    }
+    .box-main-captura{
+        background-size: cover;
+    }
 
 }
 
