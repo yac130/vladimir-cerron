@@ -344,6 +344,21 @@ html {
             color: #D91414;
             font-family: 'founders_groteskbold';
         }
+        .box-aviso-scroll{
+
+        }
+            .box-aviso-scroll span{
+                color: #fff;
+                display: block;
+                font: 15px/1.4 'founders_groteskregular';
+                text-align: center;
+                text-transform: uppercase;
+            }
+            .box-aviso-scroll img{
+                display: block;
+                margin: 10px auto;
+                max-width: 50px;
+            }
     .box-bg-mapa{
         margin: 80px auto;        
         position: relative;
@@ -568,6 +583,11 @@ html {
                     background: url('https://yac130.github.io/vladimir-cerron/img/flecha-izquierda-slider.png') no-repeat center center;
                     background-size: 40%;
                 }
+                .box-slider .bx-wrapper .bx-prev.disabled {                             
+                    display: block;
+                    opacity: 0.2;           
+                    pointer-events: none;
+                }
             .box-slider .bx-wrapper .bx-next{
                 background: url('https://yac130.github.io/vladimir-cerron/img/flecha-derecha-slider.png') no-repeat center center;
                 background-size: 40%;
@@ -579,6 +599,12 @@ html {
                     background: url('https://yac130.github.io/vladimir-cerron/img/flecha-derecha-slider.png') no-repeat center center;
                     background-size: 40%;
                 }
+                .box-slider .bx-wrapper .bx-next.disabled {                             
+                    display: block;
+                    opacity: 0.2;           
+                    pointer-events: none;
+                }
+                
         .box-info-slide{
             box-sizing: border-box;
             margin: 0 auto 40px;
@@ -714,7 +740,7 @@ html {
 @media (max-width: 376px){
 
     .box-bg-mapa .box-info-mapa{
-        bottom: 0;
+        /*bottom: -100%;*/
         max-width: 100%;
         top: inherit;
     }
@@ -829,12 +855,15 @@ html {
         .box-info-slide p{
             padding: 20px;
         }
-    .bg-mapa{
-        max-width: 200px;
+    .box-bg-mapa .bg-mapa{
+        max-width: 175px;
         position: relative;
     }
+        .icon-cerron{
+            max-width: 30px;
+        }
     .box-info-mapa{
-        bottom: -100%;
+        /*bottom: -100%;*/
         max-width: 100%;
         right: inherit;        
         top: inherit;
@@ -843,29 +872,29 @@ html {
     .box-main-captura{
         background-size: cover;
     }
-    #icon-cerron-1 {
+    .ctn-bg-mapa #icon-cerron-1 {
         bottom: 30%;
         left: 32%;
     }
-    #icon-cerron-2 {
+    .ctn-bg-mapa #icon-cerron-2 {
         bottom: 30%;
         left: 45%;
     }
-    #icon-cerron-3 {
-        bottom: 30%;
-        left: 45%;
+    .ctn-bg-mapa #icon-cerron-3 {
+        bottom: 35%;
+        left: 39%;
     }
-    #icon-cerron-4 {
+    .ctn-bg-mapa #icon-cerron-4 {
         bottom: 40%;
         left: 30%;
     }
-    #icon-cerron-5 {
+    .ctn-bg-mapa #icon-cerron-5 {
         bottom: 17%;
         left: 43%;
     }
-    #icon-cerron-6 {
-        bottom: 25%;
-        left: 35%;
+    .ctn-bg-mapa #icon-cerron-6 {
+        bottom: 24%;
+        left: 37%;
     }
     #info-dia-3,
     #info-dia-3 .arrow,

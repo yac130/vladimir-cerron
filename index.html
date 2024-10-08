@@ -11,8 +11,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="stylesheet" href="https://yac130.github.io/vladimir-cerron/css/style.css?v13"> 
-    <!--<link rel="stylesheet" href="./css/style.css?v12">-->
+    <link rel="stylesheet" href="https://yac130.github.io/vladimir-cerron/css/style.css?v14">
+    <!--<link rel="stylesheet" href="./css/style.css?v13">-->
     <link rel="stylesheet" href="https://d1ts5g4ys243sh.cloudfront.net/proyectos_especiales_prod/especiales-multimedia/puerto-de-chancay/css/examples.css?v3">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
 
@@ -801,6 +801,12 @@
                 Según el actual comandante general PNP, Víctor Zanabria, <span>se han llevado a cabo más de 50 operaciones</span>, pero únicamente han trascendido a la prensa unas pocas.
             </p>
 
+            <div class="box-aviso-scroll">
+                <span>Haz scroll</span>
+                <img src="https://d1ts5g4ys243sh.cloudfront.net/proyectos_especiales_prod/especiales-multimedia/resumen-fotos-2023/img/flecha-bajar-blanca.png" alt="">
+            </div>
+            
+
             <div class="box-bg-mapa">
                 <div class="ctn-bg-mapa">
                     <img class="icon-cerron" src="https://yac130.github.io/vladimir-cerron/img/icon-cerron.png" alt="" width="100%" id="icon-cerron-1">
@@ -906,6 +912,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="clear"></div>          
            
         </div>   
@@ -1335,12 +1342,35 @@
                 useCSS: false,
                 touchEnabled: false,
                 infiniteLoop: false,
+                onSliderLoad: function() {
+                    // Desactivar el botón "Prev" por defecto cuando cargue el slider
+                    $('.bx-prev').addClass('disabled').prop('disabled', true);
+                },
                 onSlideBefore: function($slideElement, oldIndex, newIndex){
                     // Pausar todos los videos al cambiar de slide
                     $('.bxslider iframe').each(function() {
                         var iframeSrc = $(this).attr('src');
                         $(this).attr('src', iframeSrc);
                     });
+                },
+                onSlideAfter: function($slideElement, oldIndex, newIndex) {
+                    // Obtener el total de slides y el índice del slide actual
+                    const totalSlides = slider.getSlideCount();
+                    const currentSlide = slider.getCurrentSlide();
+
+                    // Comprobar si estamos en el último slide y desactivar el botón "Next"
+                    if (currentSlide === totalSlides - 1) {
+                        $('.bx-next').addClass('disabled').prop('disabled', true);
+                    } else {
+                        $('.bx-next').removeClass('disabled').prop('disabled', false);
+                    }
+
+                    // Comprobar si estamos en el primer slide y desactivar el botón "Prev"
+                    if (currentSlide === 0) {
+                        $('.bx-prev').addClass('disabled').prop('disabled', true);
+                    } else {
+                        $('.bx-prev').removeClass('disabled').prop('disabled', false);
+                    }
                 }
             });
 
