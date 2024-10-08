@@ -12,22 +12,75 @@ html {
 
 @font-face {
     font-family: 'founders_groteskregular';
-    src: url('../fonts/foundersgrotesk-regular-webfont.woff2') format('woff2'),
-         url('../fonts/foundersgrotesk-regular-webfont.woff') format('woff');
+    src: url('https://yac130.github.io/vladimir-cerron/fonts/foundersgrotesk-regular-webfont.woff2') format('woff2'),
+         url('https://yac130.github.io/vladimir-cerron/fonts/foundersgrotesk-regular-webfont.woff') format('woff');
 }
 @font-face {
     font-family: 'founders_groteskbold';
-    src: url('../fonts/foundersgrotesk-bold-webfont.woff2') format('woff2'),
-         url('foundersgrotesk-bold-webfont.woff') format('woff');
+    src: url('https://yac130.github.io/vladimir-cerron/fonts/foundersgrotesk-bold-webfont.woff2') format('woff2'),
+         url('https://yac130.github.io/vladimir-cerron/foundersgrotesk-bold-webfont.woff') format('woff');
 }
 @font-face {
     font-family: 'chronicle_displaySBdIt';
-    src: url('../fonts/chronicledisp-semiboldital-webfont.woff2') format('woff2'),
-         url('../fonts/chronicledisp-semiboldital-webfont.woff') format('woff');
+    src: url('https://yac130.github.io/vladimir-cerron/fonts/chronicledisp-semiboldital-webfont.woff2') format('woff2'),
+         url('https://yac130.github.io/vladimir-cerron/fonts/chronicledisp-semiboldital-webfont.woff') format('woff');
 }
 .clear{
     clear: both;
 }
+
+#social{ 
+    cursor: pointer;
+    margin: 0 auto;
+    max-width: 980px;
+    position: relative;
+    text-align: right;
+    top: 15px;  
+}
+    #social ul{
+        display: inline-block;
+        margin: 0 auto;
+        padding: 0;
+        vertical-align: middle;
+    }
+        #social ul li{
+            display: inline-block;
+            margin: 0 3px;
+            vertical-align: middle;
+        }
+            #social ul li a{
+                cursor: pointer;    
+                height: 36px;
+                width: 36px;
+            }
+                #fb{
+                    background: url(https://d1ts5g4ys243sh.cloudfront.net/proyectos_especiales_prod/especiales-multimedia/personas-desaparecidas/img/fb-icon.png?v2) no-repeat 0 0;
+                    background-size: 100% !important;
+                    border: none;
+                    display: inline-block;
+                    height: 36px;
+                    text-indent: -9999px;
+                    width: 36px;
+                }
+                #wst{                
+                    background: url(https://d1ts5g4ys243sh.cloudfront.net/proyectos_especiales_prod/especiales-multimedia/personas-desaparecidas/img/wsp-icon.png?v2) no-repeat 0 0 !important;
+                    background-size: 100% !important;
+                    border: none;
+                    display: none;
+                    height: 36px;
+                    text-indent: -9999px;
+                    width: 36px;
+                }
+                #tw{            
+                    background: url(https://d1ts5g4ys243sh.cloudfront.net/proyectos_especiales_prod/especiales-multimedia/personas-desaparecidas/img/tw-icon.png?v2) no-repeat 0 0 !important;
+                    background-size: 100% !important;
+                    border: none;
+                    display: inline-block;
+                    height: 36px;
+                    text-indent: -9999px;
+                    width: 36px;
+                }
+
 
 .box-contador{
     background-color: #000;
@@ -69,7 +122,7 @@ html {
                 color: #fff;
             }
 .main-portada{
-    background: url('../img/bg-papel.jpg') no-repeat center top;
+    background: url('https://yac130.github.io/vladimir-cerron/img/bg-papel.jpg') no-repeat center top;
     background-size: 100%;
     text-align: center;
 }
@@ -262,7 +315,7 @@ html {
                         }
                 
 .box-main-mapa{
-    background: url('../img/bg-papel.jpg') repeat center top;
+    background: url('https://yac130.github.io/vladimir-cerron/img/bg-papel.jpg') repeat center top;
     background-attachment: fixed;
     background-size: 100%;
     padding: 80px 0;
@@ -505,25 +558,25 @@ html {
                 top: 10%;
             }
             .box-slider .bx-wrapper .bx-prev{
-                background: url('../img/flecha-izquierda-slider.png') no-repeat center center;
+                background: url('https://yac130.github.io/vladimir-cerron/img/flecha-izquierda-slider.png') no-repeat center center;
                 background-size: 40%;
                 height: 40px;
                 width: 40px;
                 z-index: 20;
             }
                 .box-slider .bx-wrapper .bx-prev:hover{
-                    background: url('../img/flecha-izquierda-slider.png') no-repeat center center;
+                    background: url('https://yac130.github.io/vladimir-cerron/img/flecha-izquierda-slider.png') no-repeat center center;
                     background-size: 40%;
                 }
             .box-slider .bx-wrapper .bx-next{
-                background: url('../img/flecha-derecha-slider.png') no-repeat center center;
+                background: url('https://yac130.github.io/vladimir-cerron/img/flecha-derecha-slider.png') no-repeat center center;
                 background-size: 40%;
                 height: 40px;
                 width: 40px;
                 z-index: 20;
             }
                 .box-slider .bx-wrapper .bx-next:hover{
-                    background: url('../img/flecha-derecha-slider.png') no-repeat center center;
+                    background: url('https://yac130.github.io/vladimir-cerron/img/flecha-derecha-slider.png') no-repeat center center;
                     background-size: 40%;
                 }
         .box-info-slide{
@@ -670,6 +723,12 @@ html {
 
 @media (max-width: 640px) {
 
+    #social{
+        top: 56px;
+    }
+    #wst{
+        display: inline-block;
+    }
     .box-contador{
         position: fixed;
         width: 100%;
