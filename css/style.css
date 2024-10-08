@@ -340,7 +340,7 @@ html {
         .box-info-mapa{
             background-color: #000;
             box-sizing: border-box;
-            max-width: 280px;  
+            max-width: 320px;  
             padding: 10px 20px;      
             position: absolute;
             right: -50%;
@@ -823,7 +823,7 @@ html {
         max-width: 350px;
     }
         .box-info-mapa{
-            max-width: 320px;
+            /*max-width: 320px;*/
             top: 20%;
         }
         #icon-cerron-1 {
