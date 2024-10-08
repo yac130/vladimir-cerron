@@ -379,7 +379,8 @@ html {
                 cursor: pointer;
                 max-width: 50px;
                 opacity: 0;
-                position: absolute;            
+                position: absolute;       
+                z-index: 10;     
             }
                 #icon-cerron-1{
                     bottom: 220px;
@@ -850,6 +851,11 @@ html {
         .box-info-slide p{
             padding: 20px;
         }
+    .box-main-mapa {
+        background: url('https://yac130.github.io/vladimir-cerron/img/bg-papel-movil.jpg') repeat center top;
+        background-attachment: fixed;
+        background-size: 100%;
+    }
     .box-bg-mapa .bg-mapa{
         max-width: 175px;
         position: relative;
