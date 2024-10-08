@@ -702,7 +702,7 @@ html {
         font-size: 17px;
     }
     .box-ctn-frases{
-        margin-top: 180px;
+        margin-top: 80%;
         padding: 0 20px;
     }
         .box-frase{
@@ -760,8 +760,11 @@ html {
         .box-info-slide p{
             padding: 20px;
         }
+    .bg-mapa{
+        max-width: 250px;
+    }
     .box-info-mapa{
-        bottom: -25%;
+        bottom: -65%;
         max-width: 100%;
         right: inherit;        
         top: inherit;
@@ -769,6 +772,38 @@ html {
     }
     .box-main-captura{
         background-size: cover;
+    }
+    #icon-cerron-1 {
+        bottom: 30%;
+        left: 32%;
+    }
+    #icon-cerron-2 {
+        bottom: 30%;
+        left: 45%;
+    }
+    #icon-cerron-3 {
+        bottom: 30%;
+        left: 45%;
+    }
+    #icon-cerron-4 {
+        bottom: 40%;
+        left: 30%;
+    }
+    #icon-cerron-5 {
+        bottom: 17%;
+        left: 43%;
+    }
+    #icon-cerron-6 {
+        bottom: 25%;
+        left: 35%;
+    }
+    #info-dia-3,
+    #info-dia-3 .arrow,
+    #info-dia-13,
+    #info-dia-13 .arrow,
+    #info-dia-14,
+    #info-dia-14 .arrow{
+        left: 0;
     }
 
 }
